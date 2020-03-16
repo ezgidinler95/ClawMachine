@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="description" content="Arcade Claw Machine">
+    <meta name="keywords" content="arcade claw machine">
+    <meta name="author" content="Wendy Seijas">
+    <meta name="copyright" content="Wendy Seijas">
+    <meta name="date" content="2018-08-05" scheme="YYYY-MM-DD">
+    <meta name="revised" content="2018-08-05" scheme="YYYY-MM-DD">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Arcade Claw Machine</title>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/hammer.js"></script>
+    <script src="libs/jquery.hammer.min.js"></script>
+    <link rel="stylesheet" media="all" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+        if (!window.wis_claw_machine) {
+            window.wis_claw_machine = {};
+        }
+        wis_claw_machine.setMachine("img/son.png");
+        var toy_object = [{
+            message: 'Tebrikler 10 TL kazandınız',
+            weight: 50
+        }, {
+            message: 'Tebrikler 20 TL kazandınız',
+            weight: 20
+        }, {
+            message: 'Tebrikler 15 TL kazandınız',
+            weight: 20
+        }, {
+            message: 'Tebrikler 50 TL kazandınız',
+            weight: 10
+        }];
+        wis_claw_machine.setToys(toy_object, 5);
+        wis_claw_machine.backToys = wis_claw_machine.createToys(20, "Tekrar deneyiniz !");
+        wis_claw_machine.run();
+    </script>
+</body>
+
+</html>
